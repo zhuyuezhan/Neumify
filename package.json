@@ -1,0 +1,12 @@
+{
+  "name": "neumify-repo",
+  "scripts": {
+    "i": "pnpm -r install"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "license": "MIT",
+  "private": true
+}

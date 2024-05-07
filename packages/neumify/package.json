@@ -1,0 +1,19 @@
+{
+  "name": "neumify",
+  "version": "0.0.1",
+  "author": "zhuyuezhan",
+  "description": "Neumorphic Components Library for React",
+  "keywords": [
+    "neumify",
+    "neumorphism",
+    "soft-ui",
+    "react",
+    "library",
+    "components"
+  ],
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT"
+}
