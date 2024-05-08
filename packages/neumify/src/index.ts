@@ -1,1 +1,1 @@
-// initialized
+export * from './components'

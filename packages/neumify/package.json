@@ -2,18 +2,58 @@
   "name": "neumify",
   "version": "0.0.1",
   "author": "zhuyuezhan",
-  "description": "Neumorphic Components Library for React",
+  "license": "MIT",
   "keywords": [
     "neumify",
+    "neumorphic",
     "neumorphism",
-    "soft-ui",
     "react",
-    "library",
-    "components"
+    "components",
+    "library"
   ],
+  "type": "module",
   "main": "src/index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhuyuezhan/neumify.git"
   },
-  "license": "MIT"
+  "homepage": "https://www.neumify.com/",
+  "scripts": {
+    "dev": "tsc -w && vite build --watch",
+    "build": "tsc && vite build"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.378.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.12.10",
+    "@types/react": "^18.2.66",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.9.1",
+    "vite-plugin-lib-inject-css": "^2.0.1"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
 }
