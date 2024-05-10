@@ -1,7 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ['class'],
-  content: ['./src/components/**/*.{ts,tsx}'],
+  content: [
+    './src/components/**/*.{ts,tsx}',
+    './src/App.tsx',
+    './src/main.tsx'
+  ],
   prefix: '',
   theme: {
     container: {
@@ -13,6 +17,11 @@ export default {
     },
     extend: {
       colors: {
+        base: {
+          DEFAULT: 'hsl(var(--base))',
+          light: 'hsl(var(--base-light))',
+          dark: 'hsl(var(--base-dark))'
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -65,6 +74,16 @@ export default {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out'
+      },
+      boxShadow: {
+        'outset-default':
+          '4px 4px 6px hsl(var(--shadow)),-4px -4px 6px hsl(var(--light))',
+        'outset-activate':
+          '2px 2px 4px hsl(var(--shadow)),-2px -2px 4px hsl(var(--light))',
+        'inset-default':
+          'inset 2px 2px 4px hsl(var(--shadow)),inset -2px -2px 4px hsl(var(--light))',
+        'inset-activate':
+          'inset 4px 4px 6px hsl(var(--shadow)),inset -4px -4px 6px hsl(var(--light))'
       }
     }
   },
