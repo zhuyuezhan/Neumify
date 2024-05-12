@@ -4,29 +4,49 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/common/utils'
 
 const buttonVariants = cva(
-  'shadow-outset-default active:shadow-outset-activate sd-transition inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium disabled:pointer-events-none disabled:opacity-50',
+  'shadow-outset-3 hover:shadow-inset-2 hover:border-light transition bg-base inline-flex items-center justify-center whitespace-nowrap text-sm font-medium disabled:pointer-events-none disabled:opacity-50 rounded border border-dark',
   {
     variants: {
       variant: {
-        default:
-          'bg-base text-secondary-foreground hover:bg-base/80',
-        primary: 'bg-primary text-primary-foreground hover:bg-primary/90',
-        secondary:
-          'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-        destructive:
-          'bg-destructive text-destructive-foreground hover:bg-destructive/90',
-        link: 'text-primary underline-offset-4 hover:underline'
+        primary: 'text-gray',
+        secondary: 'text-warning',
+        success: 'text-success',
+        info: 'text-info',
+        danger: 'text-danger'
       },
       size: {
-        default: 'h-10 px-4 py-2',
-        small: 'h-9 rounded-md px-3',
-        large: 'h-11 rounded-md px-8',
-        icon: 'h-10 w-10'
+        small: 'h-9 py-2 px-4',
+        regular: 'h-10 py-2 px-4',
+        large: 'h-11 py-2 px-4'
+      },
+      shape: {
+        round: '',
+        circle: 'aspect-square p-1 rounded-[9999px]',
+        squire: 'aspect-square p-1'
+      },
+      animate: {
+        false: '',
+        top: 'hover:-translate-y-default',
+        right: 'hover:translate-x-default',
+        bottom: 'hover:translate-y-default',
+        left: 'hover:-translate-x-default'
+      },
+      link: {
+        false: '',
+        true: 'border-none shadow-none hover:shadow-none '
+      },
+      underline: {
+        false: '',
+        true: 'underline-offset-8 hover:underline'
       }
     },
     defaultVariants: {
-      variant: 'default',
-      size: 'default'
+      variant: 'primary',
+      size: 'regular',
+      shape: 'round',
+      animate: false,
+      link: false,
+      underline: false
     }
   }
 )
@@ -34,15 +54,40 @@ const buttonVariants = cva(
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
+  // isLoading?: boolean
   asChild?: boolean
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  (
+    {
+      className,
+      variant,
+      size,
+      shape,
+      animate,
+      link,
+      underline,
+      // isLoading,   //TODO
+      asChild = false,
+      ...props
+    },
+    ref
+  ) => {
     const Comp = asChild ? Slot : 'button'
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(
+          buttonVariants({
+            variant,
+            size,
+            shape,
+            animate,
+            link,
+            underline,
+            className
+          })
+        )}
         ref={ref}
         {...props}
       />
