@@ -4,70 +4,28 @@
 
 @layer base {
   :root {
-    --base: 0 0% 92%;
-    --base-light:0 0% 94%;
-    --base-dark:0 0% 92%;
-    --shadow: 0 0% 78%;
-    --light: 0 0% 100%;
-    --bezier: cubic-bezier(0.23, 1, 0.32, 1.05);
-
-    --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
-    --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
-    --primary: 262.1 83.3% 57.8%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 220.9 39.3% 11%;
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
-    --accent: 220 14.3% 95.9%;
-    --accent-foreground: 220.9 39.3% 11%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 20% 98%;
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 262.1 83.3% 57.8%;
-    --radius: 0.5rem;
+    --base: hsl(233, 19%, 92%);
+    --base-light: hsl(233, 19%, 92%);
+    --base-dark: hsl(233, 19%, 92%);
+    --shadow-dark: hsl(230, 4%, 73%);
+    --shadow-light: hsl(0, 0%, 100%);
+    --gray: hsl(233, 21%, 24%);
+    --green: hsl(161, 61%, 24%);
+    --blue: hsl(228, 63%, 48%);
+    --cyan: hsl(211, 100%, 35%);
+    --red: hsl(354, 70%, 39%);
+    --border-dark: hsl(217, 30%, 86%);
+    --border-light: hsl(233, 19%, 92%);
+    --border-radius: 0.55rem;
+    --border-width: 0.0625rem;
   }
 
   .dark {
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
-    --card: 224 71.4% 4.1%;
-    --card-foreground: 210 20% 98%;
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
-    --primary: 263.4 70% 50.4%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 20% 98%;
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 20% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 20% 98%;
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
-    --ring: 263.4 70% 50.4%;
   }
 }
 
-/* @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-} */
-
 @layer utilities {
-  .sd-transition {
-    @apply transition-shadow duration-200 ease-in-out;
+  .transition {
+    @apply transition-all duration-200 ease-in-out;
   }
-
 }

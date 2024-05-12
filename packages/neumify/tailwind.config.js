@@ -18,48 +18,28 @@ export default {
     extend: {
       colors: {
         base: {
-          DEFAULT: 'hsl(var(--base))',
-          light: 'hsl(var(--base-light))',
-          dark: 'hsl(var(--base-dark))'
+          DEFAULT: 'var(--base)',
+          light: 'var(--base-light)',
+          dark: 'var(--base-dark)'
         },
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))'
-        },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))'
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))'
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))'
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))'
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))'
-        },
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))'
-        }
+        default: 'var(--gray)',
+        success: 'var(--green)',
+        indo: 'var(--cyan)',
+        warning: 'var(--blue)',
+        danger: 'var(--red)'
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)'
+        DEFAULT: 'var(--border-radius)'
+      },
+      borderWidth: {
+        DEFAULT: 'var(--border-width)'
+      },
+      borderColor: {
+        dark: 'var(--border-dark)',
+        light: 'var(--border-light)'
+      },
+      spacing: {
+        default: '2px'
       },
       keyframes: {
         'accordion-down': {
@@ -76,14 +56,12 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out'
       },
       boxShadow: {
-        'outset-default':
-          '4px 4px 6px hsl(var(--shadow)),-4px -4px 6px hsl(var(--light))',
-        'outset-activate':
-          '2px 2px 4px hsl(var(--shadow)),-2px -2px 4px hsl(var(--light))',
-        'inset-default':
-          'inset 2px 2px 4px hsl(var(--shadow)),inset -2px -2px 4px hsl(var(--light))',
-        'inset-activate':
-          'inset 4px 4px 6px hsl(var(--shadow)),inset -4px -4px 6px hsl(var(--light))'
+        'outset-3':
+          '3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light)',
+        'outset-6':
+          '6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light)',
+        'inset-2':
+          'inset 2px 2px 5px var(--shadow-dark),inset -3px -3px 7px var(--shadow-light)'
       }
     }
   },
