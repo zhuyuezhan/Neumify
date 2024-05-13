@@ -34,7 +34,7 @@ const buttonVariants = cva(
       },
       link: {
         false: '',
-        true: 'border-none shadow-none hover:shadow-none'
+        true: 'border-none shadow-clear hover:shadow-clear'
       },
       underline: {
         false: '',
