@@ -26,7 +26,8 @@ export default {
         success: 'var(--green)',
         indo: 'var(--cyan)',
         warning: 'var(--blue)',
-        danger: 'var(--red)'
+        danger: 'var(--red)',
+        hint: 'var(--light-gray)'
       },
       borderRadius: {
         DEFAULT: 'var(--border-radius)'
@@ -35,6 +36,13 @@ export default {
         DEFAULT: 'var(--border-width)'
       },
       borderColor: {
+        dark: 'var(--border-dark)',
+        light: 'var(--border-light)'
+      },
+      divideWidth: {
+        DEFAULT: 'var(--border-width)'
+      },
+      divideColor: {
         dark: 'var(--border-dark)',
         light: 'var(--border-light)'
       },
