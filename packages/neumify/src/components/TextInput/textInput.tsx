@@ -11,7 +11,7 @@ type StateType = (typeof stateTypes)[number]
 
 interface TextInputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> {
-  variants?: TextInputType
+  variant?: TextInputType
   // label for icon and button, depends on variant
   label?: React.ReactNode
   // onClick for button
@@ -28,7 +28,7 @@ const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
       onClick,
       state,
       stateInfo = 'initial',
-      variants = 'basic',
+      variant = 'basic',
       className,
       ...props
     },
@@ -36,13 +36,13 @@ const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
   ) => {
     return (
       <>
-        {variants === 'basic' && (
+        {variant === 'basic' && (
           <BasicInput ref={ref} className={className} {...props} />
         )}
-        {variants === 'icon' && (
+        {variant === 'icon' && (
           <IconInput label={label} ref={ref} className={className} {...props} />
         )}
-        {variants === 'button' && (
+        {variant === 'button' && (
           <ButtonInput
             label={label}
             onClick={onClick}
@@ -51,7 +51,7 @@ const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
             {...props}
           />
         )}
-        {variants === 'stateful' && (
+        {variant === 'stateful' && (
           <StatefulInput
             state={state}
             stateInfo={stateInfo}
