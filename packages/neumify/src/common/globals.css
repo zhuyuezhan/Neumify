@@ -14,6 +14,7 @@
     --blue: hsl(228, 63%, 48%);
     --cyan: hsl(211, 100%, 35%);
     --red: hsl(354, 70%, 39%);
+    --light-gray: hsl(230, 4%, 73%);
     --border-dark: hsl(217, 30%, 86%);
     --border-light: hsl(233, 19%, 92%);
     --border-radius: 0.55rem;
@@ -25,7 +26,7 @@
 }
 
 @layer utilities {
-  .transition {
-    @apply transition-all duration-200 ease-in-out;
+  .shadow-clear {
+    @apply shadow-none !important;
   }
 }
