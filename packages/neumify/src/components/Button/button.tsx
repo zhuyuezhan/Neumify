@@ -4,7 +4,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/common/utils'
 
 const buttonVariants = cva(
-  'shadow-outset-3 hover:shadow-inset-2 hover:border-light transition bg-base inline-flex items-center justify-center whitespace-nowrap text-sm font-medium disabled:pointer-events-none disabled:opacity-50 rounded border border-dark',
+  'shadow-outset-3 hover:shadow-inset-2 hover:border-light transition bg-base inline-flex items-center justify-center whitespace-nowrap font-medium disabled:pointer-events-none disabled:opacity-50 rounded border border-dark transition-all',
   {
     variants: {
       variant: {
@@ -22,7 +22,8 @@ const buttonVariants = cva(
       shape: {
         round: '',
         circle: 'aspect-square p-1 rounded-[9999px]',
-        squire: 'aspect-square p-1'
+        squire: 'aspect-square p-1',
+        capsule: 'rounded-full'
       },
       animate: {
         false: '',
@@ -33,7 +34,7 @@ const buttonVariants = cva(
       },
       link: {
         false: '',
-        true: 'border-none shadow-none hover:shadow-none '
+        true: 'border-none shadow-none hover:shadow-none'
       },
       underline: {
         false: '',
