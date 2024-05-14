@@ -1,4 +1,4 @@
-import React, { useState, useId } from 'react'
+import React, { useId } from 'react'
 import { motion } from 'framer-motion'
 import { cn } from '@/common/utils'
 
@@ -10,7 +10,7 @@ interface ItemVo {
 interface NavbarProps
   extends Omit<React.HTMLAttributes<HTMLUListElement>, 'onChange'> {
   items: ItemVo[]
-  onChange: (item: ItemVo) => void
+  onChange?: (item: ItemVo) => void
   activeKey?: string | number
   className?: string
 }
@@ -20,7 +20,7 @@ const Navbar = React.forwardRef<HTMLUListElement, NavbarProps>(
 
     const handleLinkClick = (item: ItemVo) => {
       if (item.key !== activeKey) {
-        onChange(item)
+        onChange && onChange(item)
       }
     }
     return (
@@ -37,7 +37,7 @@ const Navbar = React.forwardRef<HTMLUListElement, NavbarProps>(
             <li
               key={item.key}
               className={cn(
-                'hover:shadow-inset-2 relative flex cursor-pointer items-center justify-center'
+                'hover:shadow-inset-2 relative flex cursor-pointer items-center justify-center transition-shadow'
               )}
               onClick={() => handleLinkClick(item)}
             >
