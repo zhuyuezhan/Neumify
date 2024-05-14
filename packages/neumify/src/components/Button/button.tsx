@@ -15,9 +15,9 @@ const buttonVariants = cva(
         danger: 'text-danger'
       },
       size: {
-        small: 'h-9 py-2 px-4',
-        regular: 'h-10 py-2 px-4',
-        large: 'h-11 py-2 px-4'
+        small: 'min-h-9 py-2 px-4',
+        regular: 'min-h-10 py-2 px-4',
+        large: 'min-h-11 py-2 px-4'
       },
       shape: {
         round: '',
