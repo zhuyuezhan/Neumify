@@ -1,5 +1,5 @@
 export { Layout } from './Layout'
 export { Home } from './Home'
 export { Introduction } from './Introduction'
-export { Document } from './Document'
+export { Components } from './Components'
 export { Design } from './Design'

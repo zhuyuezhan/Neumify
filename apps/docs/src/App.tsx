@@ -1,5 +1,6 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Layout, Home, Document, Introduction, Design } from './pages'
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
+import { Layout, Home, Introduction, Design } from './pages'
+import { Components, Buttons, TextInputs } from './pages/Components'
 
 const router = createBrowserRouter([
   {
@@ -10,8 +11,19 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: 'docs',
-        element: <Document />
+        path: 'components',
+        element: <Components />,
+        children: [
+          { index: true, element: <Navigate to="/components/Button" /> },
+          {
+            path: 'Button',
+            element: <Buttons />
+          },
+          {
+            path: 'TextInput',
+            element: <TextInputs />
+          }
+        ]
       },
       {
         path: 'intro',
