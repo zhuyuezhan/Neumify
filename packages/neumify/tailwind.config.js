@@ -24,7 +24,7 @@ export default {
         },
         default: 'var(--gray)',
         success: 'var(--green)',
-        indo: 'var(--cyan)',
+        info: 'var(--cyan)',
         warning: 'var(--blue)',
         danger: 'var(--red)',
         hint: 'var(--light-gray)'
@@ -73,5 +73,8 @@ export default {
       }
     }
   },
-  plugins: [require('tailwindcss-animate')]
+  // plugins: [require('tailwindcss-animate')],
+  // corePlugins: {
+  //   preflight: false
+  // }
 }
