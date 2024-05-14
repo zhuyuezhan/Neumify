@@ -19,8 +19,8 @@ const Buttons: React.FC = () => {
       </Shelf>
       <Shelf title="shape">
         <Button shape="round">round</Button>
-        <Button shape="circle">circle1111</Button>
-        <Button shape="squire">squire1111</Button>
+        <Button shape="circle">circle</Button>
+        <Button shape="squire">squire</Button>
         <Button shape="capsule">capsule</Button>
       </Shelf>
       <Shelf title="animate">
