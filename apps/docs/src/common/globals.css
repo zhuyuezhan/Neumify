@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --base: hsl(233, 19%, 92%);
+    --base-light: hsl(233, 19%, 92%);
+    --base-dark: hsl(233, 19%, 92%);
+    --shadow-dark: hsl(230, 4%, 73%);
+    --shadow-light: hsl(0, 0%, 100%);
+    --gray: hsl(233, 21%, 24%);
+    --green: hsl(161, 61%, 24%);
+    --blue: hsl(228, 63%, 48%);
+    --cyan: hsl(211, 100%, 35%);
+    --red: hsl(354, 70%, 39%);
+    --light-gray: hsl(230, 4%, 73%);
+    --border-dark: hsl(217, 30%, 86%);
+    --border-light: hsl(233, 19%, 92%);
+    --border-radius: 0.55rem;
+    --border-width: 0.0625rem;
+  }
+
+  .dark {
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--base);
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--gray)
+  }
+}
+@layer utilities {
+  .shadow-clear {
+    @apply shadow-none !important;
+  }
+}
