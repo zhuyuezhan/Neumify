@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
 import { Layout, Home, Introduction, Design } from './pages'
-import { Components, Buttons, TextInputs } from './pages/Components'
+import { Components, Buttons, TextInputs, Accordions } from './pages/Components'
 
 const router = createBrowserRouter([
   {
@@ -22,6 +22,10 @@ const router = createBrowserRouter([
           {
             path: 'TextInput',
             element: <TextInputs />
+          },
+          {
+            path: 'Accordion',
+            element: <Accordions />
           }
         ]
       },
