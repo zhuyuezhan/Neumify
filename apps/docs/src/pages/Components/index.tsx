@@ -21,8 +21,9 @@ const Components: React.FC = () => {
         <Link label="Button" route="/components/Button" />
         <Link label="TextInput" route="/components/TextInput" />
         <Link label="Accordion" route="/components/Accordion" />
+        <Link label="Slider" route="/components/Slider" />
       </aside>
-      <main className="flex-1 px-16">
+      <main className="flex-1 px-16 pb-16">
         <Outlet />
       </main>
     </div>
@@ -33,3 +34,4 @@ export { Components }
 export * from './Buttons'
 export * from './TextInputs'
 export * from './Accordions'
+export * from './Sliders'

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Introduction: React.FC = () => {
   return (
-    <article className="rounded border-dark border flex flex-col items-center shadow-inset-2 justify-center gap-8 p-12 mx-48 mt-12">
+    <article className="rounded border-dark border flex flex-col shadow-inset-2 justify-center gap-8 p-12 mx-8 mt-12 md:mx-48">
       <section>
         <p className="mb-4 text-3xl font-bold">What is Neumify?</p>
         <p>

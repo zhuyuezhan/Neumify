@@ -27,8 +27,8 @@ const Header: React.FC = () => {
   }, [location])
 
   return (
-    <motion.header className="fixed top-0 flex h-20 w-screen items-center justify-between px-6 backdrop-blur">
-      <NavLink to="/" className="flex h-full w-32 items-center justify-center ml-4">
+    <motion.header className="fixed top-0 flex h-20 w-screen items-center justify-between px-6 backdrop-blur z-10">
+      <NavLink to="/" className="md:flex hidden h-full w-32 items-center justify-center ml-4">
         <Text content="Neumify" shadow="3px" fontSize="42px"></Text>
       </NavLink>
       <Navbar
